@@ -9,8 +9,6 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 # 4 = Swift
 # 5 = UI/UX
 
-
-
 class StudentFSMAdmin(StatesGroup):
     _id = State()
     name = State()

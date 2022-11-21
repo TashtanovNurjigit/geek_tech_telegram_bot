@@ -6,6 +6,6 @@ import os
 storage = MemoryStorage()
 
 
-bot = Bot(token="5663202583:AAE78paT0RNgDmNSxvw1zNfIYbzJ-w3yri0")
+bot = Bot(token="5726284724:AAGKcpJcXgE9ruzVzt07tP0jyzyYmJ4uNfY")
 dp = Dispatcher(bot, storage=storage)
 

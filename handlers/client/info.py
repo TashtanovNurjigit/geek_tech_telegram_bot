@@ -7,19 +7,19 @@ from bot import bot
 from keyboards.client.info import client_keyboard
 
 
-# students_list = [
-#     "Аскаров Акыл",
-#     "Акылбек у Арсен",
-#     "Садырбеков Бекберди",
-#     "Асланов Руслан", 
-#     "Гусев Михаил", 
-#     "Савенко Кирилл",
-#     "Жолдошбеков Искендер", 
-#     "Туратбеков Улукбек",  
-#     "Жээнбеков Нурсултан", 
-#     "Эрбол Салымбаев", 
-#     "Таштанов Нуржигит",  
-# ]
+students_dict = {
+    "Аскаров Акыл": 5,
+    "Акылбек у Арсен": 6,
+    "Садырбеков Бекберди": 7,
+    "Асланов Руслан": 6,
+    "Гусев Михаил": 10,
+    "Савенко Кирилл": 7,
+    "Жолдошбеков Искендер": 5,
+    "Туратбеков Улукбек": 10,
+    "Жээнбеков Нурсултан": 6,
+    "Эрбол Салымбаев": 8,
+    "Таштанов Нуржигит": 10
+}
 
 
 # example
@@ -43,10 +43,10 @@ async def get_courses_list(message: Message):
     await message.answer('Python, JavaScript, UI/UX, Android')
 
 
-
 def register_client_handler(dp: Dispatcher):
     dp.register_message_handler(start_command, commands=['start', 'help'])
+    # dp.register_message_handler(start_command, commands=['grade'])
     dp.register_message_handler(get_address, commands=['address'])
     dp.register_message_handler(get_courses_list, commands=['courses_list'])
-    
+
     # dp.register_message_handler(get_students, commands=['python_students_list'])
